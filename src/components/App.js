@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getUsers } from 'reduxModules/users';
 
-const App = () => <button>Click me!</button>;
+export class App extends Component {
+  render() {
+    const { dispatch } = this.props;
+    return <button>Click me!</button>;
+  }
+}
 
-export default App;
+//nClick={dispatch(getUsers())}
+
+export default connect()(App);
