@@ -1,5 +1,5 @@
 import { ofType } from 'redux-observable';
-import { mapTo, mergeMap, map } from 'rxjs/operators';
+import { mergeMap, map } from 'rxjs/operators';
 
 const LOAD = 'users/LOAD';
 const UPDATE = 'users/UPDATE';

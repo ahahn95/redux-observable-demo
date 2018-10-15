@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { loadUsers } from 'reduxModules/users';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { loadUsers } from "reduxModules/users";
 
 export class App extends Component {
   constructor(props) {
     super(props);
-
     const { dispatch } = this.props;
     dispatch(loadUsers());
   }
@@ -16,6 +15,6 @@ export class App extends Component {
 }
 
 export default connect(
-  state => ({}),
+  () => ({}),
   dispatch => ({ dispatch })
 )(App);
