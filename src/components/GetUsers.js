@@ -3,7 +3,11 @@ import { Button, Card, Elevation } from '@blueprintjs/core';
 
 const GetUsers = ({ handleButtonClick }) => (
   <Card interactive={true} elevation={Elevation.TWO}>
-    <Button onClick={handleButtonClick}>Click me!</Button>
+    <div className="Center">
+      <Button onClick={handleButtonClick}>
+        <h3>Get Users!</h3>
+      </Button>
+    </div>
   </Card>
 );
 
