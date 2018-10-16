@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Card, Elevation } from '@blueprintjs/core';
 import { loadPosts } from 'reduxModules/posts';
+import { Center } from 'components/Utility';
 
 class UserList extends Component {
   state = {
@@ -18,7 +19,9 @@ class UserList extends Component {
 
     return users.length ? (
       <div className="List">
-        <h2>Users</h2>
+        <Center>
+          <h2>Users</h2>
+        </Center>
         {users.map(user => (
           <User
             user={user}
