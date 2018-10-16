@@ -4,10 +4,10 @@ import { mergeMap, map } from 'rxjs/operators';
 const LOAD = 'users/LOAD';
 const UPDATE = 'users/UPDATE';
 
-export default function reducer(state = {}, action = {}) {
+export default function reducer(state = [], action = {}) {
   switch (action.type) {
     case UPDATE:
-      return Object.assign({}, state, action.payload);
+      return action.payload;
     default:
       return state;
   }

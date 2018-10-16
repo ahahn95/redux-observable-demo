@@ -1,16 +1,21 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { loadUsers } from "reduxModules/users";
+import React, { Component } from 'react';
+import GetUsers from 'components/GetUsers';
+import UserList from 'components/UserList';
+import PostList from 'components/PostList';
+import { connect } from 'react-redux';
+import { loadUsers } from 'reduxModules/users';
 
-export class App extends Component {
-  constructor(props) {
-    super(props);
-    const { dispatch } = this.props;
-    dispatch(loadUsers());
-  }
-  handleButtonClick = () => {};
+class App extends Component {
   render() {
-    return <button onClick={this.handleButtonClick}>Click me!</button>;
+    return (
+      <React.Fragment>
+        <GetUsers handleButtonClick={() => this.props.dispatch(loadUsers())} />
+        <div className="Container">
+          <UserList />
+          <PostList />
+        </div>
+      </React.Fragment>
+    );
   }
 }
 
